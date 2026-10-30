@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RIPE Yogurt · יוגורט קפוא עם הפרי של העונה, וגלידה בלי פשרות</title>
+  <meta name="description" content="יוגורט קפוא עם פירות טריים של העונה וגלידה מחומרי הגלם הכי טובים. הזמנה אונליין, משלוח מהיר עד הבית או איסוף מהסניף תוך 15 דקות. תל אביב, הרצליה וירושלים.">
+  <meta name="theme-color" content="#FBF3E6">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M3 17C3 8 9 3 18 3c0 9-5 14-14 14z' fill='%231E7A46'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/Reisinger-Michal-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/FbTubic-Sans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap&text=Yogurt">
+  <link rel="stylesheet" href="css/styles.css?v=18">
+</head>
+<body>
+<main id="main">
+
+  <!-- 1 · hero: centred stack over a giant ghost word, fruit scattered in three depth layers -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__fruits" data-hero-fruits aria-hidden="true"></div>
+    <div class="wrap hero__in">
+      <div class="hero__stage" aria-hidden="true">
+        <span class="hero__ghost" lang="en" dir="ltr" data-depth="ghost">Yogurt</span>
+        <span class="hero__glow"></span>
+        <img class="hero__cup" src="assets/img/hero-ripe.webp" alt="" width="601" height="1200" fetchpriority="high">
+        <!-- ltr on purpose: Chrome drops rtl text on a textPath; the Hebrew runs still read right to left -->
+        <div class="dial">
+          <svg viewBox="0 0 120 120"><defs><path id="dial-path" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text direction="ltr" style="direction:ltr;font-size:9.5px"><textPath href="#dial-path" textLength="286" lengthAdjust="spacing" data-dial-text>בעונה עכשיו · בעונה עכשיו · בעונה עכשיו ·</textPath></text></svg>
+          <span class="dial__core" data-month>אוקטובר</span>
+        </div>
+      </div>
+
+      <h1 id="hero-title" class="hero__title">הפרי של עכשיו. <span class="l2">הגלידה של תמיד.</span></h1>
+      <p class="hero__lead">יוגורט קפוא עם פירות טריים מהבוקר, וגלידה מחומרי הגלם הכי טובים שיש.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--primary" href="build.html">להרכבת יוגורט <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn btn--ghost" href="ice-cream.html#packs">לגלידה הביתה</a>
+      </div>
+      <ul class="trust">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>24 טעמים</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>כשר חלבי</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16V7h12v9M15 11h4l2 3v2h-6"/><circle cx="7.5" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></svg>משלוח עד הבית</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>איסוף תוך 15 דקות</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 2 · categories -->
+  <section class="section" style="padding-block-start:0" aria-labelledby="cats-title">
+    <div class="wrap">
+      <div class="shead">
+        <h2 id="cats-title" class="shead__title">מה בא לך היום?</h2>
+        <a class="link-arrow" href="ice-cream.html">לכל המוצרים <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+      </div>
+      <div class="cats" data-cats></div>
+    </div>
+  </section>
+
+  <!-- 3 · mini builder -->
+  <section class="section" style="padding-block-start:0" aria-labelledby="builder-title">
+    <div class="wrap">
+      <div class="builder" data-reveal>
+        <div class="builder__text">
+          <p class="sticker sticker--leaf shead__label"><b>4011</b> יוגורט בהרכבה</p>
+          <h2 id="builder-title">בונים יוגורט. שכבה אחרי שכבה.</h2>
+          <p>בוחרים פירות מהעונה ורואים אותם נופלים לכוס. בכוס בינונית 3 תוספות כלולות, וכל תוספת נוספת עולה <bdi>4 ₪</bdi>.</p>
+          <ul class="fruit-picker" data-picker aria-label="בחירת פירות ליוגורט"></ul>
+          <div class="builder__meta">
+            <p class="builder__count" data-picked aria-live="polite">עוד לא בחרת פירות</p>
+            <bdi class="builder__price" data-mini-price>34 ₪</bdi>
+          </div>
+          <div class="hero__ctas" style="margin-block-start:20px">
+            <button type="button" class="btn btn--primary" data-mini-add>הוספה לסל</button>
+            <a class="btn btn--ghost" href="build.html" data-mini-full>להרכבה המלאה</a>
+          </div>
+        </div>
+        <div class="cup" aria-hidden="true">
+          <div class="cup__plate"></div>
+          <div class="cup__stack">
+            <img class="cup__photo" src="assets/img/build-cup.webp" alt="" width="525" height="1100" loading="lazy">
+            <div class="cup__drops" data-drops></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · in season -->
+  <section class="section" style="padding-block-start:0" aria-labelledby="season-title">
+    <div class="wrap">
+      <div class="shead">
+        <div>
+          <p class="sticker sticker--season shead__label"><b>4130</b> מה בעונה</p>
+          <h2 id="season-title" class="shead__title" data-season-title>אוקטובר: רימונים, אפרסמון ותמרים טריים</h2>
+          <p>הפרי ביוגורט משתנה לפי מה שבשל עכשיו בשדה. כשהעונה נגמרת, הוא יוצא מהתפריט וחוזר בשנה הבאה.</p>
+        </div>
+        <a class="link-arrow" href="build.html">ליוגורט עם פירות העונה <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+      </div>
+      <div class="season">
+        <div class="fruits-row" data-fruits></div>
+        <article class="feature" data-feature data-reveal></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · best sellers -->
+  <section class="section" style="padding-block-start:0" aria-labelledby="best-title">
+    <div class="wrap">
+      <div class="shead">
+        <h2 id="best-title" class="shead__title">הכי אהובים <em>השבוע</em></h2>
+        <a class="link-arrow" href="ice-cream.html">לכל המוצרים <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+      </div>
+      <div class="grid-products" data-best></div>
+    </div>
+  </section>
+
+  <!-- 6 · flavours -->
+  <section class="section" style="padding-block-start:0" aria-labelledby="flav-title">
+    <div class="wrap">
+      <div class="shead">
+        <div>
+          <h2 id="flav-title" class="shead__title">24 טעמים. אחד מהם יהיה האהוב עליך.</h2>
+        </div>
+        <div class="chips" role="group" aria-label="סינון טעמים" data-chips>
+          <button class="chip" aria-pressed="true" data-f="all">הכול</button>
+          <button class="chip" aria-pressed="false" data-f="milk">חלבי</button>
+          <button class="chip" aria-pressed="false" data-f="sorbet">סורבה</button>
+          <button class="chip" aria-pressed="false" data-f="טבעוני">טבעוני</button>
+        </div>
+      </div>
+      <ul class="scoops" data-scoops></ul>
+      <p style="margin-block-start:var(--sp-group);text-align:center"><a class="btn btn--ghost" href="ice-cream.html#flavours">לכל 24 הטעמים</a></p>
+    </div>
+  </section>
+
+  <!-- 7 · ingredients (dark) -->
+  <svg class="wave" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true"><path d="M0 56V28C160 4 320 4 480 24s320 32 480 12 320-36 480-8v28z" fill="#3A1033"/></svg>
+  <section class="section dark" aria-labelledby="ing-title" style="padding-block:clamp(48px,6vw,88px)">
+    <div class="wrap">
+      <div class="shead">
+        <div>
+          <h2 id="ing-title" class="shead__title">מתחילים מהחומרים. <em>כל השאר בא לבד.</em></h2>
+          <p>גלידה טובה לא מתחילה במכונה. היא מתחילה בפיסטוק, בוניל ובחלב, ולכן אנחנו בוחרים כל רכיב בעצמנו.</p>
+        </div>
+        <a class="link-arrow" href="about.html">הסיפור שלנו <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+      </div>
+      <div class="ingredients" data-ing></div>
+    </div>
+  </section>
+  <svg class="wave" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" style="transform:scaleY(-1)"><path d="M0 56V28C160 4 320 4 480 24s320 32 480 12 320-36 480-8v28z" fill="#3A1033"/></svg>
+
+  <!-- 8 · how to order -->
+  <section class="section" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="shead">
+        <h2 id="how-title" class="shead__title">מהאתר לכפית בשלושה צעדים</h2>
+        <p>משלוח חינם מעל <bdi>150 ₪</bdi>. איסוף עצמי תמיד בחינם.</p>
+      </div>
+      <ol class="steps">
+        <li class="step" data-reveal>
+          <span class="step__n">1</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 18h24l-3 22H15z"/><path d="M18 18a6 6 0 0 1 12 0"/></svg>
+          <h3>בוחרים</h3><p>מארז לבית, יוגורט שבנית בעצמך או עוגה לאירוע. הכול עם תמונות, כדי שתדעו בדיוק מה מגיע.</p>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__n">2</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 30V16h22v14M28 22h8l6 6v2H28"/><circle cx="14" cy="33" r="3.5"/><circle cx="35" cy="33" r="3.5"/></svg>
+          <h3>משלוח או איסוף</h3><p>משלוח בתיק תרמי מהסניף הקרוב תוך 30–45 דקות, או איסוף מוכן תוך 15 דקות.</p>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__n">3</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M30 8l-14 32M24 8c6 0 10 4 10 9s-4 7-8 7"/></svg>
+          <h3>נהנים</h3><p>מגיע קפוא לגמרי. מארזים נשמרים במקפיא עד 30 יום, אם הם בכלל יחזיקו מעמד.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 9 · reviews -->
+  <section class="section" style="padding-block-start:0" aria-labelledby="rev-title">
+    <div class="wrap">
+      <div class="shead"><h2 id="rev-title" class="shead__title">מה אומרים עלינו</h2></div>
+      <div class="reviews" data-reviews></div>
+    </div>
+  </section>
+
+  <!-- 10 · branches -->
+  <section class="section" aria-labelledby="br-title">
+    <div class="wrap">
+      <div class="shead">
+        <h2 id="br-title" class="shead__title">3 סניפים, ועוד בדרך</h2>
+        <a class="link-arrow" href="branches.html">לכל הסניפים <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+      </div>
+      <div class="branches" data-branches></div>
+    </div>
+  </section>
+
+</main>
+<script type="module" src="js/home.js?v=17"></script>
+</body>
+</html>

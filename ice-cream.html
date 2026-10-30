@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>גלידות · RIPE Yogurt</title>
+  <meta name="description" content="24 טעמי גלידה וסורבה שמכינים כל בוקר, מארזים לבית, כוסות וגביעים, עוגות גלידה וכרטיס מתנה. משלוח מהיר או איסוף תוך 15 דקות.">
+  <meta name="theme-color" content="#FBF3E6">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M3 17C3 8 9 3 18 3c0 9-5 14-14 14z' fill='%231E7A46'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/Reisinger-Michal-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap&text=GelatoYogurt">
+  <link rel="stylesheet" href="css/styles.css?v=18">
+  <link rel="stylesheet" href="css/pages.css?v=4">
+</head>
+<body>
+<main id="main">
+  <header class="phead">
+    <span class="phead__ghost" lang="en" dir="ltr" aria-hidden="true">Gelato</span>
+    <div class="wrap phead__in">
+      <div>
+        <ol class="crumbs"><li><a href="index.html">דף הבית</a></li><li aria-current="page">גלידות</li></ol>
+        <h1>24 טעמים. <em>כולם מהבוקר.</em></h1>
+        <p class="phead__lead">גלידה וסורבה שמכינים כל בוקר מחומרי גלם שאנחנו בוחרים בעצמנו. בוחרים טעמים למארז הביתה, כוס או גביע לאיסוף, או עוגה לאירוע.</p>
+      </div>
+      <img class="phead__art" src="assets/img/p-tub.webp" alt="" width="632" height="640">
+    </div>
+  </header>
+
+  <nav class="jump" aria-label="קפיצה לחלק בעמוד">
+    <div class="wrap jump__in" data-jump>
+      <a href="#flavours"><img src="assets/img/s-pistachio.webp" alt="" width="26" height="26">הטעמים</a>
+      <a href="#packs"><img src="assets/img/p-tub.webp" alt="" width="26" height="26">מארזים לבית</a>
+      <a href="#cups"><img src="assets/img/p-cone.webp" alt="" width="26" height="26">כוסות וגביעים</a>
+      <a href="#cakes"><img src="assets/img/p-cake.webp" alt="" width="26" height="26">עוגות וארטיקים</a>
+      <a href="#gift"><img src="assets/img/gift-card.webp" alt="" width="26" height="26">כרטיס מתנה</a>
+    </div>
+  </nav>
+
+  <section class="block" id="flavours" aria-labelledby="flav-t">
+    <div class="wrap">
+      <div class="block__head">
+        <div><h2 id="flav-t">הטעמים שלנו</h2><p>לחצו על טעם כדי לראות רכיבים ואלרגנים. כל הטעמים זמינים במארזים, ובסניפים גם בכוס או בגביע.</p></div>
+      </div>
+      <div class="ftools">
+        <div class="chips" role="group" aria-label="סינון טעמים" data-filters>
+          <button class="chip" aria-pressed="true" data-f="all">הכול</button>
+          <button class="chip" aria-pressed="false" data-f="milk">חלבי</button>
+          <button class="chip" aria-pressed="false" data-f="sorbet">סורבה</button>
+          <button class="chip" aria-pressed="false" data-f="טבעוני">טבעוני</button>
+          <button class="chip" aria-pressed="false" data-f="ללא סוכר">ללא סוכר</button>
+          <button class="chip" aria-pressed="false" data-f="ללא גלוטן">ללא גלוטן</button>
+        </div>
+        <div class="fsearch">
+          <label class="sr-only" for="fq">חיפוש טעם</label>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input id="fq" type="search" placeholder="חיפוש טעם, למשל פיסטוק" autocomplete="off">
+        </div>
+      </div>
+      <p class="fcount" data-fcount aria-live="polite"></p>
+      <ul class="fgrid" data-fgrid></ul>
+    </div>
+  </section>
+
+  <section class="block" id="packs" aria-labelledby="packs-t">
+    <div class="wrap">
+      <div class="block__head"><div><h2 id="packs-t">מארזים לבית</h2><p>ממלאים טרי מהבוקר, אורזים בתיק תרמי, ומגיע קפוא לגמרי. במקפיא הביתי מחזיק עד 30 יום.</p></div></div>
+      <div class="grid-products" data-cat="home"></div>
+    </div>
+  </section>
+
+  <section class="block" id="cups" aria-labelledby="cups-t">
+    <div class="wrap">
+      <div class="block__head"><div><h2 id="cups-t">כוסות וגביעים</h2><p>מזמינים באתר, בוחרים טעמים בסניף, ואוספים תוך 15 דקות. כדורים בגביע לא שורדים משלוח, ולכן זה רק באיסוף.</p></div></div>
+      <div class="grid-products" data-cat="cups"></div>
+    </div>
+  </section>
+
+  <section class="block" id="cakes" aria-labelledby="cakes-t">
+    <div class="wrap">
+      <div class="block__head"><div><h2 id="cakes-t">עוגות וארטיקים</h2><p>לימי הולדת, לשישי בערב או סתם למקפיא. עוגה כדאי להזמין יום מראש.</p></div></div>
+      <div class="grid-products" data-cat="cakes"></div>
+    </div>
+  </section>
+
+  <section class="block" id="gift" aria-labelledby="gift-t">
+    <div class="wrap">
+      <div class="gift-hero" data-gift data-reveal>
+        <div>
+          <h2 id="gift-t">כרטיס מתנה. הכי קל לשמח.</h2>
+          <p>נשלח במייל או ב-WhatsApp עם ברכה אישית, ותקף שנה בכל הסניפים ובאתר.</p>
+          <div class="pills" role="radiogroup" aria-label="בחירת סכום"></div>
+          <div class="gift-hero__row"><bdi class="gift-hero__price" data-gift-price></bdi><button type="button" class="btn btn--lime" data-gift-add>הוספה לסל</button></div>
+        </div>
+        <img src="assets/img/gift-card.webp" alt="כרטיס מתנה של RIPE" width="900" height="560" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <dialog class="dlg" data-dlg aria-labelledby="dlg-t">
+    <div class="dlg__in">
+      <div class="dlg__media"><img src="" alt="" width="640" height="640" data-dlg-img></div>
+      <div class="dlg__body">
+        <h2 id="dlg-t" data-dlg-name></h2>
+        <ul class="pcard__tags" style="position:static" data-dlg-tags></ul>
+        <p data-dlg-desc></p>
+        <dl>
+          <div><dt>רכיבים</dt><dd data-dlg-ing></dd></div>
+          <div><dt>אלרגנים</dt><dd><ul class="allergens" data-dlg-all></ul></dd></div>
+        </dl>
+        <a class="btn btn--primary" href="product.html?id=pack" data-dlg-cta>להזמנה במארז</a>
+      </div>
+    </div>
+    <button class="icon-btn dlg__close" data-dlg-close aria-label="סגירה"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </dialog>
+</main>
+<script type="module" src="js/ice-cream.js?v=1"></script>
+</body>
+</html>

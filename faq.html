@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>שאלות נפוצות · RIPE Yogurt</title>
+  <meta name="description" content="תשובות על הזמנות, משלוחים ואיסוף, אלרגנים וכשרות, שמירת מארזים וביטולים ב-RIPE Yogurt.">
+  <meta name="theme-color" content="#FBF3E6">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M3 17C3 8 9 3 18 3c0 9-5 14-14 14z' fill='%231E7A46'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/Reisinger-Michal-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css?v=18">
+  <link rel="stylesheet" href="css/pages.css?v=4">
+</head>
+<body>
+<main id="main">
+  <header class="phead">
+    <div class="wrap phead__in">
+      <div>
+        <ol class="crumbs"><li><a href="index.html">דף הבית</a></li><li aria-current="page">שאלות נפוצות</li></ol>
+        <h1>יש שאלה? <em>יש תשובה.</em></h1>
+        <p class="phead__lead">כל מה שרציתם לדעת על הזמנות, משלוחים, אלרגנים ושמירה במקפיא.</p>
+        <div class="fsearch" style="margin-block-start:20px;max-width:440px">
+          <label class="sr-only" for="qq">חיפוש בשאלות</label>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input id="qq" type="search" placeholder="חיפוש, למשל משלוח או טבעוני" autocomplete="off">
+        </div>
+      </div>
+      <img class="phead__art" src="assets/img/s-vanilla.webp" alt="" width="640" height="587">
+    </div>
+  </header>
+  <div class="wrap">
+    <div class="faq">
+      <nav class="faq__cats" aria-label="נושאים" data-cats></nav>
+      <div>
+        <div data-groups></div>
+        <p class="fempty" data-none hidden>לא מצאנו שאלה כזאת. כתבו לנו ב-WhatsApp ונענה תוך דקות.</p>
+        <div class="help"><div><h2>לא מצאתם תשובה?</h2><p style="opacity:.8">אנחנו זמינים ב-WhatsApp בשעות הפתיחה.</p></div><a class="btn btn--lime" href="https://wa.me/972501234567" target="_blank" rel="noopener">כתבו לנו ב-WhatsApp</a></div>
+      </div>
+    </div>
+  </div>
+</main>
+<script type="module">
+  import { FAQ } from './js/data.js';
+  import { initLayout } from './js/layout.js?v=6';
+  initLayout();
+  const slug = i => 'q' + i;
+  document.querySelector('[data-cats]').innerHTML = FAQ.map((g, i) => `<a href="#${slug(i)}">${g.cat}</a>`).join('');
+  document.querySelector('[data-groups]').innerHTML = FAQ.map((g, i) => `
+    <section class="qgroup" id="${slug(i)}" aria-labelledby="${slug(i)}-t">
+      <h2 id="${slug(i)}-t">${g.cat}</h2>
+      ${g.items.map(([q, a]) => `<details class="qa"><summary>${q}</summary><p>${a}</p></details>`).join('')}
+    </section>`).join('');
+  const input = document.getElementById('qq');
+  input.addEventListener('input', () => {
+    const t = input.value.trim();
+    let any = false;
+    document.querySelectorAll('.qgroup').forEach(g => {
+      let n = 0;
+      g.querySelectorAll('.qa').forEach(d => {
+        const hit = !t || d.textContent.includes(t);
+        d.classList.toggle('is-hidden', !hit);
+        d.open = !!t && hit;
+        if (hit) n++;
+      });
+      g.classList.toggle('is-hidden', !n);
+      if (n) any = true;
+    });
+    document.querySelector('[data-none]').hidden = any;
+  });
+</script>
+</body>
+</html>
